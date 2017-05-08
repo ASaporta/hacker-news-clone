@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HackerNewsClone</title>
+    <title>Hacker News Clone</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <nav>
+      <h1><a href="/">Hacker News</a></h1>
+      <ul>
+        <% if logged_in? %>
+          <li><a href="/logout">logout</a></li>
+        <% else %>
+          <li><a href="/users/new">sign up</a></li>
+          <li><a href="/login">login</a></li>
+        <% end %>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>

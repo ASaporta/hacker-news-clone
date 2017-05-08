@@ -1,0 +1,25 @@
+<h2>Create Account</h2>
+
+<%= render 'errors' %>
+
+<%= form_for :user, url: {action: "create"} do |f| %>
+  <table>
+    <tr>
+      <td>
+        <%= f.label :username, "username:" %>
+      </td>
+      <td>
+        <%= f.text_field :username %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :password, "password:" %>
+      </td>
+      <td>
+        <%= f.password_field :password %>
+      </td>
+    </tr>
+  </table>
+  <%= f.submit "create account" %>
+<% end %>

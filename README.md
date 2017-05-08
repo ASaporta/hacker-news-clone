@@ -1,4 +1,6 @@
-# README
+# Hacker News Clone
+
+This application is a clone of Hacker News in Rails.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
